@@ -1,0 +1,17 @@
+{
+  "name": "polymer3project",
+  "version": "1.0.0",
+  "description": "Learning polymer 3.",
+  "main": "index.js",
+  "author": "Shaurya Sahai",
+  "license": "MIT",
+  "dependencies": {
+    "@polymer/iron-ajax": "^3.0.0-pre.8",
+    "@polymer/paper-button": "^3.0.0-pre.8",
+    "@polymer/polymer": "^3.0.0-pre.9",
+    "@webcomponents/webcomponentsjs": "^1.1.0"
+  },
+  "resolutions": {
+    "@webcomponents/webcomponentsjs": "1.1.0"
+  }
+}

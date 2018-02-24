@@ -61,11 +61,13 @@ export default class HelloWorld extends PolymerElement {
    if(this.wordNumber == this.questions[0].split(" ").length){
       if(this.answer.trim() == this.answers[0]) {
         this.$.verdict.innerText = "You're too cool!";
+        var playAgainButton = this.createButton("Play Again?");
+        this.$.verdict.appendChild(playAgainButton);
         return;
       }
       else {
         this.$.verdict.innerText = "Incorrect! Try again?";
-        var retryButton = this.createButton();
+        var retryButton = this.createButton("Retry?");
         this.$.verdict.appendChild(retryButton);
         return;
       }
@@ -76,10 +78,10 @@ export default class HelloWorld extends PolymerElement {
    history.go(0);
  }
 
- createButton() {
+ createButton(text) {
    var retryButton = document.createElement("paper-button");
    retryButton.classList.add("button");
-   retryButton.innerText = "Retry?";
+   retryButton.innerText = text;
    retryButton.addEventListener("click", this.retry);
    return retryButton;
  }
